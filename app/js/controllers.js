@@ -2,8 +2,9 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+angular.module('glucoseApp.controllers', []).
+  controller('ReadingsCtrl', ['$scope', 'Reading', function($scope, Reading) {
+    $scope.readings = Reading.query();
 
   }])
   .controller('MyCtrl2', [function() {

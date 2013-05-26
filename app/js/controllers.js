@@ -7,6 +7,9 @@ angular.module('glucoseApp.controllers', []).
     $scope.readings = Reading.query();
 
   }])
-  .controller('MyCtrl2', [function() {
+  .controller('NewReadingCtrl', ['$scope', 'Reading', function($scope, Reading) {
 
+    $scope.save = function() {
+      console.log($scope.reading);
+    }
   }]);
